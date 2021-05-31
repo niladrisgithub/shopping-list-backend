@@ -8,7 +8,7 @@ module.exports = {
 };
 
 function index(req, res) {
-    ShoppingList.find({}, function (err, shoppingList) {
+    ShoppingList.find({uid: req.query.uid }, function (err, shoppingList) {
         res.status(200).json(shoppingList);
     });
 }

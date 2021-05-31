@@ -7,3 +7,5 @@ const shoppingListSchema = new Schema ({
     unit: String,
  }, { timestamps: true
 })
+
+module.exports = mongoose.model('ShoppingList', shoppingListSchema)
