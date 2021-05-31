@@ -4,7 +4,7 @@ module.exports = {
     index,
     create,
     update,
-
+    delete: deleteSkill,
 };
 
 function index(req, res) {
@@ -25,3 +25,8 @@ function update(req, res) {
     });
 }
 
+function deleteSkill(req, res) {
+    ShoppingList.findByIdAndDelete(req.params.id, function(err, shoppingList){
+        index(req, res);
+    });
+}
