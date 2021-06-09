@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const logger = require('morgan');
 const cors = require('cors');
@@ -5,7 +7,6 @@ const shoppingListRouter = require('./routes/shoppingList');
 
 const app = express();
 
-require('dotenv').config();
 require('./config/database')
 
 app.use(logger('dev'));
